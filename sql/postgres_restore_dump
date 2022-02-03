@@ -1,0 +1,7 @@
+create user becomap_user with encrypted password 'password';
+ALTER USER becomap_user WITH SUPERUSER;
+CREATE DATABASE becom_db;
+GRANT CONNECT ON DATABASE becom_db TO public;
+grant all privileges on database becom_db to becomap_user;
+exit
+pg_restore -h localhost -U becomap_user -d becom_db < ~/Desktop/dump.dump
