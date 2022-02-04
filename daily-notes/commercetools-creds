@@ -1,0 +1,25 @@
+project_key
+sayone-test1
+
+client_id
+G-5X-x3gCKDnl0cBQTY-GYPD
+
+secret
+NaCRrbmwHQndy2zoFUhAr9WjWItWRwnr
+
+scope
+manage_project:sayone-test1
+
+api url
+https://api.australia-southeast1.gcp.commercetools.com
+
+auth url
+https://auth.australia-southeast1.gcp.commercetools.com
+
+
+
+curl https://auth.australia-southeast1.gcp.commercetools.com/oauth/token \
+     --basic --user "G-5X-x3gCKDnl0cBQTY-GYPD:NaCRrbmwHQndy2zoFUhAr9WjWItWRwnr" \
+     -X POST \
+     -d "grant_type=client_credentials&scope=manage_project:sayone-test1"
+
